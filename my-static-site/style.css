@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background: #e8491d;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Avengers-inspired color palette & utilities */
+.avengers-hero {
+  background: linear-gradient(to right, #0b1b3b 0%, #b30000 100%);
+  color: #ffffff;
+  /* ensure strong contrast for headings and body text */
+  --av-primary: #b30000;
+  --av-dark: #0b1b3b;
+  --muted: rgba(255,255,255,0.85);
+}
+
+.section-padding {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+/* Hero tweaks */
+.avengers-hero {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.avengers-hero .hero-copy {
+  max-width: 60ch; /* prevents lines stretching too wide */
+}
+
+.avengers-hero h1,
+.avengers-hero .display-5 {
+  font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+
+/* Make hero heading larger on desktop */
+@media (min-width: 768px) {
+  .avengers-hero h1,
+  .avengers-hero .display-5 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Hero image/card shadow */
+.avengers-hero .card,
+.avengers-hero img {
+  box-shadow: 0 10px 30px rgba(11,27,59,0.45);
+  border-radius: 0.6rem;
+  background-clip: padding-box;
+}
+
+/* Feature cards styling */
+.card.feature-card,
+.card .feature-card {
+  border: 1px solid rgba(11,27,59,0.08);
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(11,27,59,0.06);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  overflow: hidden;
+}
+
+/* Slight lift and darker border on hover/focus */
+.card.feature-card:hover,
+.card.feature-card:focus,
+.card.feature-card:active {
+  transform: translateY(-6px);
+  border-color: rgba(11,27,59,0.18);
+  box-shadow: 0 18px 40px rgba(11,27,59,0.12);
+}
+
+/* Soft radius for all cards used as features/gallery */
+.card.h-100 {
+  border-radius: 0.75rem;
+}
+
+/* Ensure readable text on colored backgrounds */
+.text-contrast {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .avengers-hero,
+  .section-padding {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .avengers-hero .hero-copy {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feature-icon {
+    font-size: 2.25rem;
+  }
+
+  .card.feature-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Footer styling */
+footer {
+  font-size: 0.875rem;
+  color: rgba(35, 41, 50, 0.6);
+  border-top: 1px solid rgba(11,27,59,0.06);
+  background-color: #ffffff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+/* Small utility tweaks for buttons and links to match palette */
+.btn-avengers {
+  background-color: var(--av-primary);
+  border-color: rgba(0,0,0,0.08);
+  color: #fff;
+}
+.btn-avengers-outline {
+  color: var(--av-primary);
+  border-color: var(--av-primary);
+  background: transparent;
+}
+
+/* Accessibility: high contrast focus outlines */
+a:focus, button:focus, .card:focus {
+  outline: 3px solid rgba(179,0,0,0.18);
+  outline-offset: 3px;
+}
+
+/* Additional small helpers */
+.center-on-mobile {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
